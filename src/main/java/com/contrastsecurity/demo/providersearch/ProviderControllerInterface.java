@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 // interface上可以没有class level的注解
-@RequestMapping("/default")
+//@RequestMapping("/default")
 public interface ProviderControllerInterface {
 
 	// 访问这个必须带着/，比如直接访问 /default 返回的404，得访问 /default/

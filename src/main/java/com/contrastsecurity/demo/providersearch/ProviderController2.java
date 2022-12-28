@@ -8,9 +8,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 // interface based controller必须有@Controller注解
 @Controller
+@RequestMapping("/controller2")
 public class ProviderController2 implements ProviderControllerInterface {
 	@Value("${spring.application.name}")
 	String appName;
