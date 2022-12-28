@@ -19,6 +19,14 @@ public class TestController {
 		return "hello " + name;
 	}
 
+	@GetMapping("/hello2/{name}")
+	@ResponseBody
+	public String hello(Double m, @RequestHeader(required = false) String header,
+			@PathVariable("name") String name,
+			Boolean b) {
+		return "hello " + name;
+	}
+
 	public String hello2(double m, @RequestHeader(required = false) String header, long i, @PathVariable String name,
 			boolean b) {
 		return "hello " + name;
