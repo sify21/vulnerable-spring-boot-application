@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 // interface based controller必须有@Controller注解
@@ -19,6 +20,7 @@ public class ProviderController implements ProviderControllerInterface {
 	ProviderSearchDAO providerSearchDAO;
 
 	@Override
+	@GetMapping("/")
 	public String index(Model model) {
 		model.addAttribute("appName", appName);
 		model.addAttribute("noSearch", true);

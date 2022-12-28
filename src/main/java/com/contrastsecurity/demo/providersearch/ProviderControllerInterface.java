@@ -12,7 +12,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 public interface ProviderControllerInterface {
 
 	// 访问这个必须带着/，比如直接访问 /default 返回的404，得访问 /default/
-	@GetMapping("/")
+	// @GetMapping("/")
+	// method上可以没有RequestMapping
 	public String index(Model model);
 
 	@PostMapping("/")
